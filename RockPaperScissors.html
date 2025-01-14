@@ -28,27 +28,27 @@
 
         function playRound(humanChoice, computerChoice) {
             if (humanChoice === "rock" && computerChoice === "paper") {
-                return "You lose! Paper beats rock";
                 computerScore++; 
+                return "You lose! Paper beats rock";               
             } else if (humanChoice === "rock" && computerChoice === "scissors") {
-                return "You win! Rock beats Scissors";
                 humanScore++;
+                return "You win! Rock beats Scissors";
             } else if (humanChoice === "rock" && computerChoice === "rock") {
                 return "It's a tie! Both picked rock"
             } else if (humanChoice === "paper" && computerChoice === "rock") {
-                return "You win! Paper beats rock";
                 humanScore++;
+                return "You win! Paper beats rock";
             } else if (humanChoice === "paper" && computerChoice === "scissors") {
-                return "You lose! Scissors beats paper";
                 computerScore++;
+                return "You lose! Scissors beats paper"; 
             } else if (humanChoice === "paper" && computerChoice === "paper") {
                 return "It's a tie! Both picked paper"
             } else if (humanChoice === "scissors" && computerChoice === "rock") {
-                return "You lose! Rock beats scissors";
                 computerScore++;
+                return "You lose! Rock beats scissors";
             } else if (humanChoice === "scissors" && computerChoice === "paper") {
-                return "You win! Scissors beats paper";
                 humanScore++;
+                return "You win! Scissors beats paper";
             } else if (humanChoice === "scissors" & computerChoice === "scissors") {
                 return "It's a tie! Both picked scissors"
             } else {
@@ -60,6 +60,8 @@
         const computerSelection = getComputerChoice();
 
         console.log(playRound(humanSelection, computerSelection));
+        console.log("human score " + humanScore)
+        console.log("computer score " + computerScore)
 
 
     </script>
